@@ -1,6 +1,39 @@
 .bl-background {
     background: #cdcbcb;
     padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.left {
+    width: 66%;
+    Float: left;
+}
+.right {
+    width: 34%;
+    Float: left;
+}
+
+.bl-row {
+    border-bottom: 1px solid grey;
+    height: 50px;
+}
+
+.bl-product {
+     width: 30%;
+     float: left;
+     line-height: 50px;
+ }
+.bl-count {
+    width: 30%;
+    float: left;
+    line-height: 50px;
+}
+.bl-buttons {
+    width: 38%;
+    float: left;
+    line-height: 50px;
 }
 
 .bl-list {
