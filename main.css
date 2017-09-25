@@ -1,54 +1,161 @@
 .bl-background {
-    background: #cdcbcb;
-    padding: 20px;
+    background: #d7d5d5;
     width: 100%;
-    max-width: 700px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding-top: 100px;
     margin: auto;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*align-items: stretch;*/
+    display: block;
 }
 
-.left {
-    width: 66%;
+/*Right column*/
+.bl-list {
+    min-width: 345px;
+    width: 67%;
     Float: left;
+    /*padding: 14px;*/
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.08);
 }
-.right {
-    width: 34%;
-    Float: left;
+.bl-input {
+    padding: 14px;
 }
-
+.field {
+    padding-left: 10px;
+    width: 80%;
+    background-color: rgba(110, 195, 255, 0.03);
+    border-color: rgba(125, 176, 249, 0.4);
+    border-right: none;
+    border-radius:5px;
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
 .bl-row {
-    border-bottom: 1px solid grey;
-    height: 50px;
+    padding: 7px;
+    border-top: 1px solid #d3d3d3;
+    height: 45px;
 }
 
 .bl-product {
-     width: 30%;
+     width: 28%;
      float: left;
      line-height: 50px;
+    padding-left: 14px;
  }
 .bl-count {
-    width: 30%;
+    width: 28%;
     float: left;
     line-height: 50px;
+    text-align: center;
+}
+.bl-label{
+    padding: 5px 10px;
+    background: #e6e6e6;
+    border-radius: 4px;
 }
 .bl-buttons {
     width: 38%;
     float: left;
     line-height: 50px;
+    text-align: right;
 }
 
-.bl-list {
-    background: white;
-    margin-bottom: 10px;
-}
-
+/*Right column*/
 .bl-bought {
+    border:1px solid rgba(34,36,38,.15);
+    width: 28%;
+    min-width: 120px;
+    Float: left;
+    margin-left: 4%;
     background: white;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.08);
+}
+.row {
+    padding: 14px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.bl-title-left {
+    display: block;
+    line-height: 0px;
+    height: 0;
+    font-size: 17px;
+    margin: 7px 0 7px 0;
+}
+.st {
+    border: none!important;
+}
+.mini-label{
+    background-color: #E8E8E8;
+    color: rgba(0,0,0,.6);
+    display: inline-block;
+    line-height: 1;
+    vertical-align: baseline;
+    box-sizing: inherit;
+    padding: 6px;
+}
+.title {
+    font-size: 14px;
+}
+.count {
+    background-color: #F2711C!important;
+    border-color: #F2711C!important;
+    color: #FFF!important;
+    margin-left: 4px;
+    border-radius: 50%;
+    padding: 1px 5px 1px 5px;
 }
 
 /*Кнопки*/
-.bl-label {
-    background: #cdcbcb;
+.bl-minus, .bl-plus {
+    width: 30px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+.bl-minus {
+    background: #db0e12;
+    opacity: 0.4;
 }
 .bl-plus {
-    background: #04a613;
+    background: #21BA45;
+}
+.bl-buy {
+    width: 80px;
+    background: #E3E3E3;
+    border-radius: 5px;
+}
+.bl-cancel {
+    width: 30px;
+    border-radius: 5px;
+    background: #db0e12;
+    color: white;
+}
+.butt {
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.new-item{
+    box-sizing: inherit;
+    display: flex;
+}
+.add{
+    height: 34px;
+    width: 20%;
+    color: white;
+    background: rgba(41, 95, 215, 0.87);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
