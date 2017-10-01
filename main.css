@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     position: fixed;
+    overflow: auto;
 }
 
 .container {
@@ -12,18 +13,15 @@
     max-width: 900px;
     padding-top: 100px;
     margin: auto;
-    /*flex-direction: row;*/
-    /*flex-wrap: wrap;*/
-    /*align-items: stretch;*/
-    display: block;
+    box-sizing: border-box;
 }
 
-/*Right column*/
+/*Left column*/
 .bl-list {
-    min-width: 345px;
+    margin: 5px;
+    min-width: 360px;
     width: 67%;
-    Float: left;
-    /*padding: 14px;*/
+    float: left;
     background: white;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.08);
 }
@@ -76,7 +74,7 @@
     width: 28%;
     min-width: 120px;
     Float: left;
-    margin-left: 4%;
+    margin: 5px;
     background: white;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.08);
 }
@@ -99,9 +97,9 @@
     color: rgba(0,0,0,.6);
     display: inline-block;
     line-height: 1;
-    vertical-align: baseline;
     box-sizing: inherit;
     padding: 6px;
+    margin: 2px;
 }
 .title {
     font-size: 14px;
@@ -110,9 +108,62 @@
     background-color: #F2711C!important;
     border-color: #F2711C!important;
     color: #FFF!important;
-    margin-left: 4px;
+    margin-left: 3px;
     border-radius: 50%;
     padding: 1px 5px 1px 5px;
+}
+
+/*Badge*/
+.badge {
+    background: rgba(163,24,204,0.94);
+    width: 205px;
+    height:150px;
+    bottom: -70px;
+    left: 20px;
+    position: fixed;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all 1s ease;
+}
+.badge:hover {
+    background: #5f24ff;
+    transform: translateY(-70px);
+}
+.buy-list {
+    color: white;
+    margin: 25px;
+    font-size: 30px;
+    display: block;
+    font-weight: bold;
+}
+.created-by {
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+}
+.name{
+    font-size: 26px;
+    display: block;
+}
+/*Print badge*/
+@media print {
+    .badge {
+        padding-top: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        bottom: 1px;
+        height: 80px;
+        border: #5f24ff solid 4px;
+    }
+    .buy-list{
+        display: none;
+    }
+    .created-by{
+        color: black;
+        background: white;
+
+    }
 }
 
 /*Кнопки*/
@@ -124,8 +175,7 @@
     font-size: 16px;
 }
 .bl-minus {
-    background: #db0e12;
-    opacity: 0.4;
+    background: rgba(219, 14, 18, 0.58);
 }
 .bl-plus {
     background: #21BA45;
@@ -158,4 +208,36 @@
     background: rgba(41, 95, 215, 0.87);
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
+}
+/*Tooltips*/
+button::after {
+    background: rgba(163,24,204,0.94);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    content: attr(data-tooltip);
+    margin-left: -40px;
+    margin-top: -30px;
+    opacity: 0;
+    transform: scale(0);
+    padding: 7px 7px;
+    position: absolute;
+    visibility: hidden;
+    font-weight: normal;!important;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+button:hover:after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+/*Зміна розміру табличок*/
+@media (max-width: 531px) {
+    .bl-list{
+        width: 100%;
+    }
+    .bl-bought {
+        width: 100%;
+    }
 }
