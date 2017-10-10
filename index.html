@@ -10,69 +10,42 @@
 <body>
 <div class="bl-background">
     <div class="container">
-    <div class="bl-list">
-        <div class="bl-input">
-            <div class="new-item">
-        <input class="field" type="text" placeholder="Назва товару">
-            <button class="add butt" data-tooltip="Додати товар до списку">Додати</button>
+        <div class="bl-list">
+            <div class="bl-input">
+                <div class="new-item">
+                    <input class="field" type="text" placeholder="Назва товару">
+                    <button class="add" data-tooltip="Додати товар до списку">Додати</button>
+                </div>
             </div>
+            <template id="template">
+                <div class="bl-row"><div class="bl-pr">
+                    <div class="bl-product"></div>
+                    <input class="rename" type="text" placeholder=""></div>
+                    <div class="bl-count">
+                        <button class="bl-minus disabled" data-tooltip="Відняти 1">-</button>
+                        <span class="bl-label">1</span>
+                        <button class="bl-plus" data-tooltip="Додати 1">+</button>
+                    </div>
+                    <div class="bl-buttons">
+                        <button class="bl-buy" data-tooltip="Купити">Куплено</button>
+                        <button class="bl-cancel" data-tooltip="Видалити зі списку">x</button>
+                    </div>
+                </div>
+            </template>
         </div>
-        <div class="bl-row">
-        <div class="bl-product">
-            Помідори
-        </div>
-        <div class="bl-count">
-            <button class="bl-minus butt" data-tooltip="Відняти 1">-</button>
-            <span class="bl-label">1</span>
-            <button class="bl-plus butt" data-tooltip="Додати 1">+</button>
-        </div>
-            <div class="bl-buttons">
-                <button class="bl-buy butt" data-tooltip="Купити">Куплено</button>
-                <button class="bl-cancel butt" data-tooltip="Видалити зі списку">x</button>
-        </div>
-    </div>
-        <div class="bl-row">
-            <div class="bl-product">
-                Печиво
-            </div>
-            <div class="bl-count">
-                <button class="bl-minus butt" data-tooltip="Відняти 1">-</button>
-                <span class="bl-label">1</span>
-                <button class="bl-plus butt" data-tooltip="Додати 1">+</button>
-            </div>
-            <div class="bl-buttons">
-                <button class="bl-buy butt" data-tooltip="Купити">Куплено</button>
-                <button class="bl-cancel butt" data-tooltip="Видалити зі списку">x</button>
-            </div>
-        </div>
-        <div class="bl-row">
-            <div class="bl-product">
-                Сир
-            </div>
-            <div class="bl-count">
-                <button class="bl-minus butt" data-tooltip="Відняти 1">-</button>
-                <span class="bl-label">1</span>
-                <button class="bl-plus butt" data-tooltip="Додати 1">+</button>
-            </div>
-            <div class="bl-buttons">
-                <button class="bl-buy butt" data-tooltip="Купити">Куплено</button>
-                <button class="bl-cancel butt" data-tooltip="Видалити зі списку">x</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="bl-bought"><div class="row"><h3 class="bl-title-left">Залишилося</h3></div>
-        <div class="row"><div class="not-bought">
-                <span class="mini-label"><span class="title">Помідори</span><span class="count">1</span></span>
-                <span class="mini-label"><span class="title">Печиво</span><span class="count">1</span></span>
-                <span class="mini-label"><span class="title">Сир</span><span class="count">1</span></span>
+        <div class="bl-bought"><div class="row"><h3 class="bl-title-left">Залишилося</h3></div>
+            <div class="row"><div class="not-bought">
+                <template class ="statsTemplate">
+                    <span class="mini-label"><span class="title"></span><span class="count"></span></span>
+                </template>
+            </div></div>
+            <div class="row"><h3 class="bl-title-left">Куплено</h3></div>
+            <div class="row st"><div class="stats"></div></div>
         </div></div>
-        <div class="row"><h3 class="bl-title-left">Куплено</h3></div>
-        <div class="row st"><div class="stats"></div></div>
-    </div></div>
     <div class="badge"><span class="buy-list">Buy List</span>
         <span class="created-by">Created by: <span class="name">Daria Tyshchenko</span></span></div>
 </div>
-
+<script type="text/javascript" src="js/jquery-2.1.4.js"> </script>
+<script type="text/javascript" src="js/main.js"> </script>
 </body>
 </html>

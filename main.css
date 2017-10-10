@@ -7,60 +7,78 @@
     position: fixed;
     overflow: auto;
 }
+button, input:focus {
+    outline: none;
+}
 
 .container {
     width: 100%;
+    height: 100%;
     max-width: 900px;
     padding-top: 100px;
     margin: auto;
     box-sizing: border-box;
 }
 
+input {
+    border-color: rgba(125, 176, 249, 0.4);
+    border-radius: 5px;
+    padding-left: 8px;
+}
+
 /*Left column*/
 .bl-list {
-    margin: 5px;
-    min-width: 360px;
-    width: 67%;
+    border: 1px solid rgba(34, 36, 38, .15);
+    margin: 1%;
+    min-width: 343px;
+    width: 68%;
     float: left;
     background: white;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.08);
+    box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12), 0 2px 10px 0 rgba(34, 36, 38, .08);
+    border-radius: 5px;
 }
+
 .bl-input {
     padding: 14px;
 }
+
 .field {
-    padding-left: 10px;
     width: 80%;
-    background-color: rgba(110, 195, 255, 0.03);
-    border-color: rgba(125, 176, 249, 0.4);
     border-right: none;
-    border-radius:5px;
-    border-top-right-radius: 0!important;
-    border-bottom-right-radius: 0!important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
 }
+
 .bl-row {
-    padding: 7px;
     border-top: 1px solid #d3d3d3;
-    height: 45px;
+    height: 50px;
+}
+
+.bl-pr {
+    position: relative;
+    vertical-align: top;
+    width: 28%;
+    float: left;
+    line-height: 30px;
+    padding: 10px;
 }
 
 .bl-product {
-     width: 28%;
-     float: left;
-     line-height: 50px;
-    padding-left: 14px;
- }
+}
+
 .bl-count {
     width: 28%;
     float: left;
     line-height: 50px;
     text-align: center;
 }
-.bl-label{
+
+.bl-label {
     padding: 5px 10px;
     background: #e6e6e6;
     border-radius: 4px;
 }
+
 .bl-buttons {
     width: 38%;
     float: left;
@@ -68,56 +86,71 @@
     text-align: right;
 }
 
+.rename {
+    float: left;
+    line-height: 23px;
+}
+
 /*Right column*/
 .bl-bought {
-    border:1px solid rgba(34,36,38,.15);
-    width: 28%;
-    min-width: 120px;
+    border: 1px solid rgba(34, 36, 38, .15);
+    width: 27%;
     Float: left;
-    margin: 5px;
+    margin: 1%;
     background: white;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.08);
+    box-shadow: 0 2px 4px 0 rgba(34, 36, 38, .12), 0 2px 10px 0 rgba(34, 36, 38, .08);
+    border-radius: 5px;
 }
+
 .row {
     padding: 14px;
     border-bottom: 1px solid #d3d3d3;
 }
+
 .bl-title-left {
     display: block;
-    line-height: 0px;
+    line-height: 0;
     height: 0;
     font-size: 17px;
     margin: 7px 0 7px 0;
 }
+
 .st {
-    border: none!important;
+    border: none !important;
 }
-.mini-label{
+
+.mini-label {
     background-color: #E8E8E8;
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, .6);
     display: inline-block;
     line-height: 1;
     box-sizing: inherit;
     padding: 6px;
     margin: 2px;
 }
+
 .title {
     font-size: 14px;
 }
+
 .count {
-    background-color: #F2711C!important;
-    border-color: #F2711C!important;
-    color: #FFF!important;
+    background-color: #F2711C !important;
+    border-color: #F2711C !important;
+    color: #FFF !important;
     margin-left: 3px;
     border-radius: 50%;
     padding: 1px 5px 1px 5px;
 }
 
+.line-through {
+    text-decoration: line-through;
+}
+
 /*Badge*/
 .badge {
-    background: rgba(163,24,204,0.94);
+    background: rgba(163, 24, 204, 0.94);
     width: 205px;
-    height:150px;
+    height: 150px;
     bottom: -70px;
     left: 20px;
     position: fixed;
@@ -126,10 +159,12 @@
     border-top-left-radius: 10px;
     transition: all 1s ease;
 }
+
 .badge:hover {
     background: #5f24ff;
     transform: translateY(-70px);
 }
+
 .buy-list {
     color: white;
     margin: 25px;
@@ -137,15 +172,18 @@
     display: block;
     font-weight: bold;
 }
+
 .created-by {
     color: white;
     font-size: 18px;
     display: inline-block;
 }
-.name{
+
+.name {
     font-size: 26px;
     display: block;
 }
+
 /*Print badge*/
 @media print {
     .badge {
@@ -156,10 +194,12 @@
         height: 80px;
         border: #5f24ff solid 4px;
     }
-    .buy-list{
+
+    .buy-list {
         display: none;
     }
-    .created-by{
+
+    .created-by {
         color: black;
         background: white;
 
@@ -167,6 +207,17 @@
 }
 
 /*Кнопки*/
+
+/*розібратися з курсором*/
+.disabled {
+    opacity: 0.6;
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+!important;
+}
+
 .bl-minus, .bl-plus {
     width: 30px;
     border-radius: 50%;
@@ -174,70 +225,85 @@
     text-align: center;
     font-size: 16px;
 }
+
 .bl-minus {
-    background: rgba(219, 14, 18, 0.58);
+    background: rgb(240, 32, 48);
 }
+
 .bl-plus {
     background: #21BA45;
 }
+
 .bl-buy {
-    width: 80px;
+    /*width: 80px;*/
+    padding: 5px;
     background: #E3E3E3;
     border-radius: 5px;
 }
+
 .bl-cancel {
     width: 30px;
     border-radius: 5px;
     background: #db0e12;
     color: white;
 }
-.butt {
-    height: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-}
-.new-item{
+
+.new-item {
     box-sizing: inherit;
     display: flex;
 }
-.add{
+
+.add {
     height: 34px;
     width: 20%;
     color: white;
-    background: rgba(41, 95, 215, 0.87);
+    background: #295FD7;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 /*Tooltips*/
 button::after {
-    background: rgba(163,24,204,0.94);
+    background: #A318CC;
     border-radius: 8px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     color: white;
     content: attr(data-tooltip);
     margin-left: -40px;
-    margin-top: -30px;
+    margin-top: -38px;
     opacity: 0;
     transform: scale(0);
     padding: 7px 7px;
     position: absolute;
     visibility: hidden;
-    font-weight: normal;!important;
+    font-weight: normal;
     font-size: 14px;
     transition: all 0.5s ease;
 }
+
 button:hover:after {
-    opacity: 1;
+    opacity: 1;!important;
     visibility: visible;
     transform: scale(1);
 }
+
 /*Зміна розміру табличок*/
-@media (max-width: 531px) {
-    .bl-list{
+@media (max-width: 500px) {
+    .bl-list {
         width: 100%;
     }
+
     .bl-bought {
         width: 100%;
     }
+}
+button {height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #4d4a4d;!important;
+}
+button:active {
+    opacity: 0.7;
+    border-bottom: none;
 }
